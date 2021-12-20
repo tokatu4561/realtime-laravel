@@ -1,1 +1,2 @@
 my-docker-laravel
+Laravelプロジェクト用　Docker使用したLEMP環境
