@@ -6,7 +6,8 @@ Laravelプロジェクト用　Docker使用したLEMP環境
 docker compose up -d --build
 
 ## コンテナに入ってライブラリをインストール
-docker compose exec app bash
+docker compose exec app bash 
+
 composer install
 
 ## envファイルを作成 .env.exampleのテンプレートをコピー
