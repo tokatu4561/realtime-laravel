@@ -5276,9 +5276,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./components/Example */ "./resources/js/components/Example.js");
 
-Echo.channel("notifications").listen("UserSessionChanged", function (e) {
+window.Echo.channel("notifications").listen("UserSessionChanged", function (e) {
   console.log("realtime");
-  var notificationElement = document.getElementById("notifications");
+  var notificationElement = document.getElementById("notification");
   notificationElement.innerHTML = e.message;
   notificationElement.classList.remove("invisible");
   notificationElement.classList.remove("alert-success");
@@ -5319,12 +5319,12 @@ window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
+console.log(1);
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: "pusher",
-  key: "1078d1eb602e953fe9e0",
+  key: "ea378c49d2267b64bcb1",
   cluster: "ap3",
-  encrypted: true,
-  disableStats: true
+  encrypted: true
 });
 
 /***/ }),

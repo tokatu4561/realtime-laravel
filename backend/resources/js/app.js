@@ -14,9 +14,9 @@ require("./bootstrap");
 
 require("./components/Example");
 
-Echo.private("notifications").listen("UserSessionChanged", (e) => {
+window.Echo.channel("notifications").listen("UserSessionChanged", (e) => {
     console.log("realtime");
-    const notificationElement = document.getElementById("notifications");
+    const notificationElement = document.getElementById("notification");
 
     notificationElement.innerHTML = e.message;
 
